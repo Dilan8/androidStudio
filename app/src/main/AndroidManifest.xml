@@ -37,9 +37,6 @@
         <activity android:name=".contactus" />
         <activity android:name=".Adventure" />
         <activity android:name=".MyReviews" />
-        <activity android:name=".feedback" />
-        <activity android:name=".Report" />
-        <activity android:name=".Request" />
         <activity android:name=".edit_profile" />
         <activity android:name=".Favouritesaved" />
         <activity android:name=".Review" />
