@@ -30,12 +30,7 @@ public class profile extends AppCompatActivity {
             }
         });
 
-        Button button2 = findViewById(R.id.btn_reviw);
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MyReviews.class));
-            }
-        });
+
 
         Button button3 = findViewById(R.id.btn_feedback);
         button3.setOnClickListener(new View.OnClickListener() {

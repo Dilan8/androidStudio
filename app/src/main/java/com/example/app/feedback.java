@@ -1,16 +1,18 @@
 package com.example.app;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MyReviews extends AppCompatActivity {
+public class feedback extends AppCompatActivity {
     private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -36,9 +38,25 @@ public class MyReviews extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_reviews);
+        setContentView(R.layout.activity_feedback);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        mTextMessage = findViewById(R.id.message);
+       // mTextMessage = findViewById(R.id.message111);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+//        Button button2 = findViewById(R.id.but);
+//        button2.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent activityIntent = new Intent(getApplicationContext(), Request.class);
+//                startActivity(activityIntent);
+//            }
+//        });
     }
+
+
+
+
+
+
+
+
 }
