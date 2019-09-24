@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+
+        <activity android:name=".AdventureActivity" />
+        <activity android:name=".adventureDetails" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".addImage" />
+        <activity android:name=".ContactForm"/>
+        <activity
+            android:name=".Login_Form"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".profile" />
+        <activity android:name=".Saved" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Signup_Form" />
+        <activity android:name=".contactus" />
+        <activity android:name=".Adventure" />
+        <activity android:name=".MyReviews" />
+        <activity android:name=".feedback" />
+        <activity android:name=".Report" />
+        <activity android:name=".Request" />
+        <activity android:name=".edit_profile" />
+        <activity android:name=".Favouritesaved" />
+        <activity android:name=".Review" />
+        <activity android:name=".Restaurants" />
+        <activity android:name=".Stays" />
+        <activity android:name=".explore" />
+        <activity android:name=".admin" />
+        <activity android:name=".view_feedback" />
+        <activity android:name=".add_adventure" />
+        <activity android:name=".add_stays" />
+        <activity android:name=".add_restaurants" />
+        <activity android:name=".user_management" />
+    </application>
+
+</manifest>
