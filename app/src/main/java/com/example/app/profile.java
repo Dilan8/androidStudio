@@ -58,9 +58,9 @@ public class profile extends AppCompatActivity {
                 case R.id.navigation_home:
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     return true;
-                case R.id.navigation_dashboard:
-                    startActivity(new Intent(getApplicationContext(), Saved.class));;
-                    return true;
+//                case R.id.navigation_dashboard:
+//                    startActivity(new Intent(getApplicationContext(), Saved.class));;
+//                    return true;
                 case R.id.navigation_notifications:
                     startActivity(new Intent(getApplicationContext(), profile.class));
                     return true;

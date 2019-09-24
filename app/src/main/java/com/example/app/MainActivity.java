@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
                     return false;
-                case R.id.navigation_dashboard:
-                    startActivity(new Intent(getApplicationContext(), Saved.class));
-                    return true;
+
                 case R.id.navigation_notifications:
                     startActivity(new Intent(getApplicationContext(), profile.class));
                     return true;
@@ -68,21 +66,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton ib3 =findViewById(R.id.ib3);
-        ib3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Favouritesaved.class));
-            }
-        });
-
-        ImageButton ib =findViewById(R.id.ib);
-        ib.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Favouritesaved.class));
-            }
-        });
 
     }
 

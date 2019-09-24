@@ -22,12 +22,7 @@ public class admin extends AppCompatActivity {
             }
         });
 
-        Button button2 = findViewById(R.id.btn_admin_feedback);
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), view_feedback.class));
-            }
-        });
+
 
         Button button3 = findViewById(R.id.btn_user_management);
         button3.setOnClickListener(new View.OnClickListener() {

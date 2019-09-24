@@ -29,19 +29,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".profile" />
-        <activity android:name=".Saved" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Signup_Form" />
-        <activity android:name=".contactus" />
-        <activity android:name=".Adventure" />
         <activity android:name=".edit_profile" />
-        <activity android:name=".Favouritesaved" />
         <activity android:name=".Restaurants" />
         <activity android:name=".Stays" />
         <activity android:name=".explore" />
         <activity android:name=".admin" />
-        <activity android:name=".view_feedback" />
-        <activity android:name=".add_adventure" />
         <activity android:name=".add_stays" />
         <activity android:name=".add_restaurants" />
         <activity android:name=".user_management" />
