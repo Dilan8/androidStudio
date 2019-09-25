@@ -90,7 +90,7 @@ public class add_restaurants extends AppCompatActivity {
         mTextViewShowUploads1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            //    openImagesAct();
+                openImagesAct();
             }
         });
     }
@@ -173,8 +173,8 @@ public class add_restaurants extends AppCompatActivity {
             Toast.makeText(this, "No File Selected", Toast.LENGTH_SHORT).show();
         }
     }
-//    private void openImagesAct() {
-//        Intent intent = new Intent(this, ResActivity.class);
-//        startActivity(intent);
-//    }
+    private void openImagesAct() {
+        Intent intent = new Intent(this, ResActivity.class);
+        startActivity(intent);
+    }
 }

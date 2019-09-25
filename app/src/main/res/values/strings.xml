@@ -90,6 +90,14 @@
     <string name="hhh" translatable="false">Favourites</string>
     <string name="title_activity_sdf">sdf</string>
     <string name="fed1" translatable="false">Send Feedback</string>
+    <string name="img_view4" translatable="false"></string>
+    <string name="name_view4" translatable="false"></string>
+    <string name="des_view4" translatable="false"></string>
+    <string name="url_view4" translatable="false"></string>
+    <string name="button401" translatable="false">Update</string>
+
+
+
 
 
 
