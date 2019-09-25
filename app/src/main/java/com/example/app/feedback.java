@@ -41,13 +41,13 @@ public class feedback extends AppCompatActivity {
        // mTextMessage = findViewById(R.id.message111);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-//        Button button2 = findViewById(R.id.but);
-//        button2.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent activityIntent = new Intent(getApplicationContext(), Request.class);
-//                startActivity(activityIntent);
-//            }
-//        });
+        Button button2 = findViewById(R.id.but);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent activityIntent = new Intent(getApplicationContext(), Request.class);
+                startActivity(activityIntent);
+            }
+        });
     }
 
 
