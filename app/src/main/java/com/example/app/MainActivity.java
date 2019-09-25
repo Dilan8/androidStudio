@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         bt33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Restaurants.class));
+                startActivity(new Intent(MainActivity.this, restAct.class));
             }
         });
 
