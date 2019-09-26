@@ -33,20 +33,9 @@
                 android:padding="5dp"
                 android:src="@drawable/ic_image"/>
 
-            <!--            <ImageView-->
-            <!--                android:id="@+id/avatarIv"-->
-            <!--                android:layout_margin="9dp"-->
-            <!--                android:layout_width="120dp"-->
-            <!--                android:layout_height="120dp"-->
-            <!--                android:padding="5dp"-->
-            <!--                android:adjustViewBounds="true"-->
-            <!--                android:background="@color/colorPrimary"-->
-            <!--                android:src="@drawable/ic_image"-->
-            <!--                android:scaleType="centerInside"-->
-            <!--                />-->
-
         </RelativeLayout>
 
+        <!--name-->
         <TextView
             android:id="@+id/pnameTv"
             android:layout_width="wrap_content"
