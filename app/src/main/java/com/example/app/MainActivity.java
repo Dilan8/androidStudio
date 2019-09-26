@@ -21,15 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return false;
-
-                case R.id.navigation_notifications:
-                    startActivity(new Intent(getApplicationContext(), profile.class));
-                    return true;
-            }
+//            switch (item.getItemId()) {
+//                case R.id.navigation_home:
+//                    mTextMessage.setText(R.string.title_home);
+//                    return false;
+//
+//                case R.id.navigation_notifications:
+//                    startActivity(new Intent(getApplicationContext(), profile.class));
+//                    return true;
+//            }
             return false;
         }
     };

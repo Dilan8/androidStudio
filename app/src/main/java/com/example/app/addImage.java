@@ -119,7 +119,7 @@ public class addImage extends AppCompatActivity {
                 && data != null && data.getData() != null) {
             mImageUri = data.getData();
 
-            Picasso.with(this).load(mImageUri).into(mImageView);
+            Picasso.get().load(mImageUri).into(mImageView);
         }
     }
 

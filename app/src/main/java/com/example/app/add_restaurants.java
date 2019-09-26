@@ -110,7 +110,7 @@ public class add_restaurants extends AppCompatActivity {
                 && data != null && data.getData() != null) {
             mImageUri = data.getData();
 
-            Picasso.with(this).load(mImageUri).into(mImageView1);
+            Picasso.get().load(mImageUri).into(mImageView1);
         }
     }
 

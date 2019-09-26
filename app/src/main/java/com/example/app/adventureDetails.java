@@ -48,7 +48,7 @@ public class adventureDetails<mDBListener3> extends AppCompatActivity {
         ImageNameDetails3.setText(name);
         ImageDiscrptionDetails3.setText(Description);
         ImageLocationDetails3.setText(Location);
-        Picasso.with(this)
+        Picasso.get()
                 .load(imageUrl)
                 .placeholder(R.mipmap.ic_launcher)
                 .fit()

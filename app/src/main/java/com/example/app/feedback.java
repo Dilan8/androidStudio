@@ -20,15 +20,15 @@ public class feedback extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    return false;
-
-                case R.id.navigation_notifications:
-                    startActivity(new Intent(getApplicationContext(), profile.class));
-                    return true;
-            }
+//            switch (item.getItemId()) {
+//                case R.id.navigation_home:
+//                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+//                    return false;
+//
+//                case R.id.navigation_notifications:
+//                    startActivity(new Intent(getApplicationContext(), profile.class));
+//                    return true;
+//            }
             return false;
         }
     };

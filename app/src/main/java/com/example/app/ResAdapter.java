@@ -40,7 +40,7 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ImageViewHolder>
     public void onBindViewHolder(ImageViewHolder holder, int position) {
         Upload_res uploadCurrent = mUploads.get(position);
         holder.textViewName.setText(uploadCurrent.getName());
-        Picasso.with(mContext)
+        Picasso.get()
                 .load(uploadCurrent.getImageUrl())
                 .placeholder(R.mipmap.ic_launcher)
                 .fit()

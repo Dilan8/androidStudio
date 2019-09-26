@@ -90,9 +90,6 @@
     <string name="des_view4" translatable="false"></string>
     <string name="url_view4" translatable="false"></string>
     <string name="button401" translatable="false">Update</string>
-
-
-    //Cletwin
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -141,5 +138,20 @@
     <string name="editName">enter Name</string>
     <string name="edit">Name</string>
 
+
+
+    //Cletwin
+    <string name="login">Login</string>
+    <string name="already_registered">Already Registered?</string>
+    <string name="register">Register</string>
+    <string name="by_clicking_submit_you_agree_our_terms_and_conditions">by clicking submit you agree our Terms and Conditions</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="already">Continue with Existing Account</string>
+
+    
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_daw">DawActivity</string>
 
 </resources>

@@ -6,4 +6,17 @@
     <color name="backgraound">#00DFF2E0</color>
     <color name="background">#AE84D8D8</color>
     <color name="btn">#4A832A</color>
+
+    <color name="address">#2F7092</color>
+    <color name="followers">#3AB140</color>
+    <color name="headings">#66BB6A</color>
+    <color name="solidCircle">#AAFFFFFF</color>
+    <color name="circleBorder">#50FFFFFF</color>
+    <color name="gradEnd">#4FB453</color>
+    <color name="gradStart">#4B884E</color>
+    <color name="followersBg">#52B657</color>
+    <color name="followingBg">#66BB6A</color>
+    <color name="grey">#E5E5E5</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
 </resources>

@@ -69,7 +69,7 @@ public class DetailsActivity<mDBListener> extends AppCompatActivity {
         ImageNameDetails.setText(name);
         ImageDiscrptionDetails.setText(Description);
         ImageLocationDetails.setText(Location);
-        Picasso.with(this)
+        Picasso.get()
                 .load(imageUrl)
                 .placeholder(R.mipmap.ic_launcher)
                 .fit()

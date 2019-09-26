@@ -12,11 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".restAct"></activity>
+        <activity android:name=".restAct"/>
         <activity android:name=".RestaurantsinDetailed" />
         <activity android:name=".adminrest" />
         <activity android:name=".ResActivity" />
         <activity android:name=".Request" />
+        <activity android:name=".ProfileActivity"/>
         <activity android:name=".feedback" />
         <activity android:name=".AdventureActivity" />
         <activity android:name=".adventureDetails" />

@@ -39,7 +39,7 @@ public class RestaurantsinDetailed extends AppCompatActivity {
         ImageNameDetails1.setText(name);
         ImageDiscrptionDetails1.setText(Description);
         ImageLocationDetails1.setText(Location);
-        Picasso.with(this)
+        Picasso.get()
                 .load(imageUrl)
                 .placeholder(R.mipmap.ic_launcher)
                 .fit()

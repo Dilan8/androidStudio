@@ -39,7 +39,7 @@ public class AdventureAdapter extends RecyclerView.Adapter <AdventureAdapter.Ima
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         upload uploadCurrent = mUploads3.get(position);
         holder.textViewName.setText(uploadCurrent.getName());
-        Picasso.with(mContext3)
+        Picasso.get()
                 .load(uploadCurrent.getImageUrl())
                 .placeholder(R.mipmap.ic_launcher)
                 .fit()
