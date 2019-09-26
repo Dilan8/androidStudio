@@ -95,6 +95,8 @@
     <string name="des_view4" translatable="false"></string>
     <string name="url_view4" translatable="false"></string>
     <string name="button401" translatable="false">Update</string>
+    <string name="button_choose_image1" translatable="false">Choose File</string>
+    <string name="button_upload1" translatable="false">Upload</string>
 
 
     //Cletwin
