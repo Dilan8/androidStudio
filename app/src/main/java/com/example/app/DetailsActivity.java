@@ -45,7 +45,7 @@ public class DetailsActivity<mDBListener> extends AppCompatActivity {
 
 
          updateRef= FirebaseDatabase.getInstance().getReference().child("uploads");
-       
+
         ImageNameDetails = findViewById(R.id.ImageNameDetails);
         ImageDiscrptionDetails = findViewById(R.id.ImageDiscrptionDetails);
         ImageDetails = findViewById(R.id.ImageDetails);
