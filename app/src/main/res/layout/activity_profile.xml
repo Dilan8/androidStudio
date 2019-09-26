@@ -97,6 +97,7 @@
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
+                <!--email-->
                 <TextView
                     android:id="@+id/emailTv"
                     android:layout_width="wrap_content"
