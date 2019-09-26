@@ -23,7 +23,7 @@
     <string name="dd" translatable="false">Nilaveli Beach hotel LKR 7200.00/night </string>
     <string name="button3" translatable="false">save</string>
     <string name="textView7" translatable="false">Ella jungle hotel LKR 9700.00/night </string>
-    <string name="button4" translatable="false">Update</string>
+    <string name="button4" translatable="false">UPDATE</string>
     <string name="txt111" translatable="false">More Restaurants to Explore</string>
     <string name="txt2" translatable="false">UgaBay , Eastern province of SriLanka</string>
     <string name="tct3" translatable="false">Arcadia cafe and restaurant</string>
@@ -95,8 +95,6 @@
     <string name="des_view4" translatable="false"></string>
     <string name="url_view4" translatable="false"></string>
     <string name="button401" translatable="false">Update</string>
-    <string name="button_choose_image1" translatable="false">Choose File</string>
-    <string name="button_upload1" translatable="false">Upload</string>
 
 
     //Cletwin

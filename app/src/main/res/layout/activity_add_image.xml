@@ -41,7 +41,8 @@
         android:layout_marginEnd="61dp"
         android:layout_marginRight="61dp"
         android:layout_marginBottom="454dp"
-        android:hint="Enter Place Name" />
+        android:hint="Enter Place Name"
+      />
 
     <EditText
         android:id="@+id/edit_text_file_name3"
@@ -61,7 +62,8 @@
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:layout_marginBottom="325dp"
-        android:hint="Enter Description" />
+        android:hint="Enter Description"
+       />
 
     <EditText
         android:id="@+id/edit_text_file_name4"
@@ -81,7 +83,8 @@
         android:layout_marginEnd="53dp"
         android:layout_marginRight="53dp"
         android:layout_marginBottom="216dp"
-        android:hint="Enter Location Url" />
+        android:hint="Enter Location Url"
+        />
 
 
     <ImageView
@@ -133,7 +136,7 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="59dp"
         android:background="@drawable/button_rounded"
-        android:text="Upload" />
+        android:text="upload" />
 
 
     <TextView
@@ -152,7 +155,8 @@
         android:layout_marginBottom="57dp"
         android:background="@drawable/button_rounded"
         android:gravity="center"
-        android:text="Show Uploads"
+
+        android:text="Show Uplods"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="16sp" />
 
