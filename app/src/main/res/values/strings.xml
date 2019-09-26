@@ -53,13 +53,7 @@
 
 
     //Varniah
-    <string name="txt5" translatable="false">
-        <br>Arcadia Cafe and restaurant\n\n</br>
-        <br>MEALS: Dinner, Breakfast, Lunch\n\n</br>
-        <br></br>
-        <br>CUISINES: Sri Lankan, Italian, Chinese, American, Indian, Asian\n\n</br>
-        <br>FEATURES: Reservations, Seating, Table Service\n\n</br>
-    </string>
+
     <string name="yy" translatable="false">
         <br>Reviews\n</br>
         <br>Reviewed July 3, 2019\n</br>
