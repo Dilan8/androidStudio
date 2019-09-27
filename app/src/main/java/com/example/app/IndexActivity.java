@@ -63,7 +63,7 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
         restaurant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(IndexActivity.this, RegisterActivity.class));
+                startActivity(new Intent(IndexActivity.this, restAct.class));
             }
         });
 
@@ -101,6 +101,9 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        if(id == R.id.nav_main){
+            startActivity(new Intent(this, IndexActivity.class));
+        }
         if(id == R.id.nav_addv){
             startActivity(new Intent(IndexActivity.this, AdventureActivity.class));
         }
@@ -108,7 +111,7 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
             startActivity(new Intent(IndexActivity.this, ProfileActivity.class));
         }
         if(id == R.id.nav_restaurant){
-            startActivity(new Intent(IndexActivity.this, ProfileActivity.class));
+            startActivity(new Intent(IndexActivity.this, restAct.class));
         }
         if(id == R.id.nav_profile){
             startActivity(new Intent(IndexActivity.this, ProfileActivity.class));

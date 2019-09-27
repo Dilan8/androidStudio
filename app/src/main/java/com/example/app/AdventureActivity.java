@@ -1,6 +1,7 @@
 package com.example.app;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -69,6 +70,12 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
         NavigationView navigationView = (NavigationView)findViewById(R.id.navagation_view);
         navigationView.setNavigationItemSelectedListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Adventures");
+
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
 
         mRecyclerView3 = findViewById(R.id.recycler_view3);
         mRecyclerView3.setHasFixedSize(true);
@@ -182,6 +189,9 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        if(id == R.id.nav_main){
+            startActivity(new Intent(AdventureActivity.this, IndexActivity.class));
+        }
         if(id == R.id.nav_addv){
             startActivity(new Intent(AdventureActivity.this, AdventureActivity.class));
         }
@@ -189,7 +199,7 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
             startActivity(new Intent(AdventureActivity.this, ProfileActivity.class));
         }
         if(id == R.id.nav_restaurant){
-            startActivity(new Intent(AdventureActivity.this, ProfileActivity.class));
+            startActivity(new Intent(AdventureActivity.this, restAct.class));
         }
         if(id == R.id.nav_profile){
             startActivity(new Intent(AdventureActivity.this, ProfileActivity.class));
