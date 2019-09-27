@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main_oldActivity">
 
     <RatingBar
         android:id="@+id/ratingBar8"
@@ -102,7 +102,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt11"
         app:layout_constraintTop_toTopOf="@+id/frameLayout2"
-        app:layout_constraintVertical_bias="0.907" />
+        app:layout_constraintVertical_bias="0.907"
+        android:layout_marginRight="16dp" />
 
     <Button
         android:id="@+id/but"
@@ -118,7 +119,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/txt7"
         app:layout_constraintTop_toTopOf="@+id/frameLayout"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.88"
+        android:layout_marginLeft="104dp" />
 
     <FrameLayout
         android:id="@+id/frameLayout2"
@@ -211,7 +213,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout3"
         app:layout_constraintStart_toStartOf="@+id/dd"
         app:layout_constraintTop_toTopOf="@+id/frameLayout3"
-        app:layout_constraintVertical_bias="0.708" />
+        app:layout_constraintVertical_bias="0.708"
+        android:layout_marginLeft="120dp" />
 
 
     <RatingBar
@@ -225,7 +228,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/frameLayout4"
         app:layout_constraintTop_toTopOf="@+id/frameLayout4"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintVertical_bias="0.943"
+        android:layout_marginRight="16dp" />
 
     <FrameLayout
         android:id="@+id/frameLayout4"
@@ -261,7 +265,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/frameLayout4"
         app:layout_constraintTop_toTopOf="@+id/frameLayout4"
-        app:layout_constraintVertical_bias="0.832" />
+        app:layout_constraintVertical_bias="0.832"
+        android:layout_marginRight="16dp" />
 
     <Button
         android:id="@+id/bn4"

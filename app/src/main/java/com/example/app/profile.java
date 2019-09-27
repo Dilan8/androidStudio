@@ -56,7 +56,7 @@ public class profile extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
 //                case R.id.navigation_home:
-//                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), Main_oldActivity.class));
 //                    return true;
 ////                case R.id.navigation_dashboard:
 ////                    startActivity(new Intent(getApplicationContext(), Saved.class));;

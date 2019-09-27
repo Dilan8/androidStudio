@@ -217,7 +217,7 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(ProfileActivity.this, "Your account permanently deleted", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                            Intent intent = new Intent(ProfileActivity.this, Main_oldActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
@@ -476,7 +476,7 @@ public class ProfileActivity extends AppCompatActivity {
             //mProfileTv.setText(user.getEmail());
         }
         else{
-            startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+            startActivity(new Intent(ProfileActivity.this, Main_oldActivity.class));
             finish();
         }
     }

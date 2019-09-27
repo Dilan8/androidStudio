@@ -1,8 +1,5 @@
 package com.example.app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,9 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class feedback extends AppCompatActivity {
+public class Main_oldActivity extends AppCompatActivity {
     private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -22,7 +22,7 @@ public class feedback extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 //            switch (item.getItemId()) {
 //                case R.id.navigation_home:
-//                    startActivity(new Intent(getApplicationContext(), Main_oldActivity.class));
+//                    mTextMessage.setText(R.string.title_home);
 //                    return false;
 //
 //                case R.id.navigation_notifications:
@@ -36,25 +36,36 @@ public class feedback extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
+        setContentView(R.layout.activity_main_old);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-       // mTextMessage = findViewById(R.id.message111);
+        mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        Button button2 = findViewById(R.id.but);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button bt11 =findViewById(R.id.bt11);
+        bt11.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Intent activityIntent = new Intent(getApplicationContext(), Request.class);
-                startActivity(activityIntent);
+                startActivity(new Intent(Main_oldActivity.this, Stays.class));
             }
         });
+
+        Button bt2 =findViewById(R.id.bt2);
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Main_oldActivity.this, AdventureActivity.class));
+            }
+        });
+
+        Button bt33 =findViewById(R.id.bt33);
+        bt33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Main_oldActivity.this, restAct.class));
+            }
+        });
+
+
     }
-
-
-
-
-
-
-
 
 }

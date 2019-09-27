@@ -19,7 +19,7 @@ public class Login_Form extends AppCompatActivity {
         Button button = findViewById(R.id.btn_profile);
         button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Main_oldActivity.class));
             }
         });
 
