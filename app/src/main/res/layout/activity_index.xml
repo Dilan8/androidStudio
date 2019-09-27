@@ -83,7 +83,7 @@
                     android:adjustViewBounds="true"
                     android:padding="2dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/stays"/>
+                    android:src="@drawable/stay"/>
                 <TextView
                     android:id="@+id/staTv"
                     android:layout_width="wrap_content"

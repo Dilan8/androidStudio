@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    tools:context=".Main_oldActivity">
+    tools:context=".Admin_dash_Activity">
 
     <Button
         android:id="@+id/btn_add_stays"
@@ -55,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/stay" />
+        app:srcCompat="@drawable/stays"/>
 
     <ImageView
         android:id="@+id/imageView2"

@@ -126,7 +126,7 @@
     <string name="add_adventure_head">ADD ADVENTURE </string>
     <string name="add_adventure_add_images">Add Images</string>
     <string name="add_adventure_pick_place_on_map">Pick the place on MAP</string>
-    <string name="explore_panel_head">EXPLORE PANEL</string>
+    <string name="explore_panel_head">ADMIN PANEL</string>
     <string name="explore_panel_add_stays">Add Stays</string>
     <string name="explore_panel_add_adventure">Add Adventure</string>
     <string name="explore_panel_add_restaurant">Add Restaurant</string>

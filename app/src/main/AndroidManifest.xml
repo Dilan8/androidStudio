@@ -40,6 +40,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".edit_profile" />
         <activity android:name=".Restaurants" />
+        <activity android:name=".Admin_login_Activity"/>
+        <activity android:name=".Admin_dash_Activity"/>
         <activity android:name=".Stays" />
         <activity android:name=".explore" />
         <activity android:name=".admin" />
