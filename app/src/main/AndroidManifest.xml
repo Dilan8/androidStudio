@@ -38,12 +38,18 @@
         <activity android:name=".Admin_login_Activity" />
         <activity android:name=".Admin_dash_Activity" />
         <activity android:name=".add_restaurants" />
+        <activity android:name=".stayadmindetail"></activity>
+        <activity android:name=".staysfulldetail" />
+        <activity android:name=".staysuserActivity" />
+        <activity android:name=".Stays_admin" />
+        <activity android:name=".StaysImagesActivity" />
+        <activity android:name=".admin_stays" />
+        <activity android:name=".add_stays" />
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

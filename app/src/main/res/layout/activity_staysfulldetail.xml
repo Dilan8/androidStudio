@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".staysfulldetail">
+
+    <ImageView
+        android:id="@+id/ImageDetails8"
+        android:layout_width="423dp"
+        android:layout_height="226dp"
+        android:layout_marginStart="@dimen/eight"
+        android:layout_marginLeft="@dimen/eight"
+        android:layout_marginTop="@dimen/eight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_menu_gallery" />
+
+
+    <TextView
+        android:id="@+id/ImageDiscrptionDetails8"
+        android:layout_width="391dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="@dimen/eight"
+        android:layout_marginEnd="@dimen/eight"
+        android:layout_marginBottom="@dimen/eight"
+        android:ellipsize="end"
+        android:maxLines="150"
+        android:textSize="@dimen/fifteen"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
+
+    <TextView
+        android:id="@+id/ImageLocationDetails8"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
+        android:autoLink="all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
+
+    <TextView
+        android:id="@+id/ImageNameDetails8"
+        android:layout_width="402dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="@dimen/eight"
+        android:layout_marginLeft="@dimen/eight"
+        android:layout_marginEnd="@dimen/eight"
+        android:layout_marginRight="@dimen/eight"
+        android:layout_marginBottom="@dimen/eight"
+
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="71dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="@dimen/eight"
+        android:layout_marginBottom="@dimen/eight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ImageLocationDetails8"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921"
+        app:srcCompat="@drawable/adventure" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

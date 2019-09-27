@@ -155,4 +155,26 @@
     <string name="email">Email</string>
     <string name="phone">Phone</string>
 
+    <string name="admin_stays_head">Stays</string>
+    <string name="admin_stays_add_stay">Add Stays</string>
+    <string name="admin_stays_manage_stays">Manage Stays</string>
+    <string name="add_stays_btn">Choose Image</string>
+    <string name="add_stays_btn_done">Add Stay</string>
+    <string name="add_stays_btn_map">Pick a Place</string>
+    <string name="stays_image_name">Name</string>
+    <string name="stays_show_all">Show All Stays</string>
+
+    <string name="stay_name">Enter Name of the Stay</string>
+    <string name="stay_description_price">Enter Description and Price</string>
+    <string name="stay_location">Add a Location Url</string>
+    <string name="stay_choose_image">Choose Image</string>
+    <string name="stay_show_all">All Stays</string>
+    <string name="stay_add_stay">Add Stay</string>
+    <string name="stay_show_stays">Show Stays</string>
+    <string name="update_choose_image">Choose Image</string>
+    <string name="update_update">Update</string>
+    <string name="stay_name_place">Name and Place of  the Stay</string>
+    <string name="image_saty_name">Name</string>
+    <string name="search_hint">Search here for Stays</string>
+
 </resources>
