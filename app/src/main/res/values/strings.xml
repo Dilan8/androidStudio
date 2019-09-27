@@ -51,6 +51,9 @@
     <string name="contact_posted">Your message has been successfully delivered.</string>
     <string name="ImageNameDetails"></string>
     <string name="edittext"></string>
+    <string name="button_choose_image"> Choose Image</string>
+    <string name="text_view_show_uploads"> Show Uploads</string>
+    <string name="button_upload"> Upload</string>
 
 
     //Varniah

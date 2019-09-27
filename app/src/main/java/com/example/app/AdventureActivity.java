@@ -10,8 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -35,11 +38,12 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
     private AdventureAdapter mAdapter3;
 
     private ProgressBar mProgressCircle3;
-
+    private EditText editText;
     private FirebaseStorage mStorage3;
     private DatabaseReference mDatabaseRef3;
     private ValueEventListener mDBListener3;
     private List<upload> mUploads3;
+    private  ArrayList<upload> mUploadsful3;
 
     //Drawer
     private DrawerLayout mDrawerLayout;
@@ -82,6 +86,7 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
         mProgressCircle3 = findViewById(R.id.progress_circle3);
 
         mUploads3 = new ArrayList<>();
+        mUploadsful3 = new ArrayList<>();
 
         mAdapter3 = new AdventureAdapter(AdventureActivity.this, mUploads3);
 
@@ -90,6 +95,25 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
         mAdapter3.setOnItemClickListener(AdventureActivity.this);
         mStorage3 = FirebaseStorage.getInstance();
         mDatabaseRef3 = FirebaseDatabase.getInstance().getReference("uploads");
+        editText = findViewById(R.id.edittext1234);
+        editText.addTextChangedListener(new TextWatcher(){
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+
+            }
+        });
 
         mDBListener3=mDatabaseRef3.addValueEventListener(new ValueEventListener() {
             @Override
@@ -155,7 +179,18 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
         super.onDestroy();
         mDatabaseRef3.removeEventListener(mDBListener3);
     }
+    private void  filter(String text){
 
+        ArrayList<upload> filteredList = new ArrayList<>();
+        for (upload item :mUploads3){
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+        mUploadsful3=new ArrayList<>(mUploads3);
+        mAdapter3.filterList(filteredList);
+        mUploads3=new ArrayList<>(filteredList);
+    }
     //Drawer
     private void checkUserStatus(){
         FirebaseUser user = firebaseAuth.getCurrentUser();

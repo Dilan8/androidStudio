@@ -129,7 +129,7 @@ public class ImageActivity extends AppCompatActivity implements ImageAdapter.OnI
         upload selectedItem=mUploads.get(position);
         String[] uploadData = {selectedItem.getId(),selectedItem.getImageUrl(),selectedItem.getName(),selectedItem.getName3(),selectedItem.getName4()};
         openDetailActivity(uploadData);
-        Toast.makeText(this, "position:" + position, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "position:" + position, Toast.LENGTH_SHORT).show();
 
 
     }
@@ -144,7 +144,7 @@ public class ImageActivity extends AppCompatActivity implements ImageAdapter.OnI
             @Override
             public void onSuccess(Void aVoid) {
                 mDatabaseRef.child(selectedKey).removeValue();
-//                Toast.makeText(ImageActivity.this, "Item deleted", Toast.LENGTH_SHORT).show();
+               Toast.makeText(ImageActivity.this, "Item deleted", Toast.LENGTH_SHORT).show();
             }
         });
     }

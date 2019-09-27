@@ -128,7 +128,7 @@ public class ResActivity extends AppCompatActivity implements ResAdapter.OnItemC
         Upload_res selectedItem = mUploads.get(position);
         String[] uploadData = {selectedItem.getDes(), selectedItem.getImageUrl(), selectedItem.getID(), selectedItem.getName(), selectedItem.getUrl()};
         openDetailActivity(uploadData);
-        Toast.makeText(this, "Normal click at position: " + position, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Normal click at position: " + position, Toast.LENGTH_SHORT).show();
     }
 
     @Override
