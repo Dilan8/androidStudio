@@ -31,7 +31,8 @@ public class AdventureAdapter extends RecyclerView.Adapter <AdventureAdapter.Ima
     @NonNull
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(mContext3).inflate(R.layout.adventure_item, parent, false);
+        View v = LayoutInflater.from(mContext3)
+                .inflate(R.layout.adventure_item, parent, false);
         return new ImageViewHolder(v);
     }
 

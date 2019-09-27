@@ -120,7 +120,6 @@ public class ContactForm extends AppCompatActivity {
     private void checkUserStatus(){
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null){
-            //mProfileTv.setText(user.getEmail());
         }
         else{
             startActivity(new Intent(ContactForm.this, MainActivity.class));

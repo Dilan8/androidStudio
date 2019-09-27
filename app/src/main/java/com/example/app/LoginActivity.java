@@ -200,13 +200,11 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             pd.dismiss();
-                            // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
                             startActivity(new Intent(LoginActivity.this, IndexActivity.class));
                             finish();
                         } else {
                             pd.dismiss();
-                            // If sign in fails, display a message to the user.
                             Toast.makeText(LoginActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
@@ -253,7 +251,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
 
                             FirebaseUser user = mAuth.getCurrentUser();
 
@@ -267,6 +264,7 @@ public class LoginActivity extends AppCompatActivity {
                                 hashMap.put("name", "");
                                 hashMap.put("phone", "");
                                 hashMap.put("image", "");
+                                hashMap.put("admin", "");
 
                                 FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -280,9 +278,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, ""+user.getEmail(), Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this, IndexActivity.class));
                             finish();
-                            //updateUI(user);
                         } else {
-                            // If sign in fails, display a message to the user.
                             Toast.makeText(LoginActivity.this, "Login Failed..", Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }

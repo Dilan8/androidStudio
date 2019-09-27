@@ -23,7 +23,7 @@ public class Admin_dash_Activity extends AppCompatActivity {
         Button button2 = findViewById(R.id.btn_add_stays);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), add_stays.class));
+                //startActivity(new Intent(getApplicationContext(), add_stays.class));
             }
         });
 

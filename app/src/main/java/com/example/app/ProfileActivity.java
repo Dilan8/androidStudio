@@ -62,7 +62,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     ImageView avatarIv;
-    TextView nameTv, emailTv, phoneTv;
+    TextView nameTv, emailTv, phoneTv, adminTv;
     FloatingActionButton fab;
 
     ProgressDialog pd;
@@ -107,6 +107,7 @@ public class ProfileActivity extends AppCompatActivity {
         nameTv = findViewById(R.id.pnameTv);
         emailTv = findViewById(R.id.emailTv);
         phoneTv = findViewById(R.id.phoneTv);
+        adminTv = findViewById(R.id.adminTv);
         fab = findViewById(R.id.fab);
 
         pd = new ProgressDialog(this);
@@ -122,8 +123,10 @@ public class ProfileActivity extends AppCompatActivity {
                     String email = ""+ds.child("email").getValue();
                     String phone = ""+ds.child("phone").getValue();
                     String image = ""+ds.child("image").getValue();
+                    String admin = ""+ds.child("admin").getValue();
 
                     nameTv.setText(name);
+                    adminTv.setText(admin);
                     emailTv.setText(email);
                     phoneTv.setText(phone);
                     try{
@@ -146,6 +149,12 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 showEditProfileDialog();
 
+            }
+        });
+        adminTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), UsersActivity.class));
             }
         });
     }
@@ -224,7 +233,7 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(ProfileActivity.this, "Your account permanently deleted", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(ProfileActivity.this, Main_oldActivity.class);
+                            Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
@@ -480,10 +489,9 @@ public class ProfileActivity extends AppCompatActivity {
     private void checkUserStatus(){
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null){
-            //mProfileTv.setText(user.getEmail());
         }
         else{
-            startActivity(new Intent(ProfileActivity.this, Main_oldActivity.class));
+            startActivity(new Intent(ProfileActivity.this, MainActivity.class));
             finish();
         }
     }

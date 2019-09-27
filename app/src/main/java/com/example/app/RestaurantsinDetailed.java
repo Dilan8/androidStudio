@@ -60,7 +60,6 @@ public class RestaurantsinDetailed extends AppCompatActivity {
     private void checkUserStatus(){
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null){
-            //mProfileTv.setText(user.getEmail());
         }
         else{
             startActivity(new Intent(this, MainActivity.class));

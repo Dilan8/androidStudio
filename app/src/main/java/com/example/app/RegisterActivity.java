@@ -26,7 +26,7 @@ import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText mEmailEt, mPasswordEt;
+    EditText mEmailEt, mPasswordEt, mconpass;
     Button mRegisterBtn, mLoginBtn;
 
     ProgressDialog progressDialog;
@@ -48,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         mEmailEt = findViewById(R.id.emailEt);
         mPasswordEt = findViewById(R.id.passwordEt);
+        mconpass = findViewById(R.id.txt_conpassword);
         mRegisterBtn = findViewById(R.id.registerBtn);
         mLoginBtn = findViewById(R.id.btn_login);
 
@@ -62,6 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = mEmailEt.getText().toString().trim();
                 String password = mPasswordEt.getText().toString().trim();
+                String conpass =  mconpass.getText().toString().trim();
 
                 if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     mEmailEt.setError("Invalid Email!");
@@ -70,6 +72,10 @@ public class RegisterActivity extends AppCompatActivity {
                 else if(password.length()<6){
                     mPasswordEt.setError("Password Length at least 6 characters");
                     mPasswordEt.setFocusable(true);
+                }
+                else if(!conpass.equals(password)){
+                    mconpass.setError("Password Length at least 6 characters");
+                    mconpass.setFocusable(true);
                 }
                 else{
                     registerUser(email, password);
@@ -106,6 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
                             hashMap.put("name", "");
                             hashMap.put("phone", "");
                             hashMap.put("image", "");
+                            hashMap.put("admin", "");
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
 
                             DatabaseReference reference = database.getReference("Users");

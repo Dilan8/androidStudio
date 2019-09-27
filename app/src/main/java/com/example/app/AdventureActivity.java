@@ -160,7 +160,6 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
     private void checkUserStatus(){
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null){
-            //mProfileTv.setText(user.getEmail());
         }
         else{
             startActivity(new Intent(AdventureActivity.this, MainActivity.class));

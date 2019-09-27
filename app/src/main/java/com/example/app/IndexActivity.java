@@ -74,7 +74,6 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
     private void checkUserStatus(){
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null){
-            //mProfileTv.setText(user.getEmail());
         }
         else{
             startActivity(new Intent(IndexActivity.this, MainActivity.class));
