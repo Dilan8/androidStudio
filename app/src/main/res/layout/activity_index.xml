@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@drawable/gradient"
+    tools:context=".IndexActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/advL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/adventureL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+                <ImageView
+                    android:id="@+id/adventureIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_margin="8dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/adv"/>
+                <TextView
+                    android:id="@+id/advenTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/adventureIv"
+                    android:layout_alignTop="@id/adventureIv"
+                    android:layout_alignRight="@id/adventureIv"
+                    android:layout_alignBottom="@id/adventureIv"
+                    android:layout_margin="1dp"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textColor="@color/colorWhite"
+                    android:text="Adventures"
+                    android:layout_alignStart="@id/adventureIv"
+                    android:layout_alignEnd="@id/adventureIv" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linlay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/advL"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/stL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linlay1">
+
+            <RelativeLayout
+                android:id="@+id/staysL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/staysIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_margin="8dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/stays"/>
+                <TextView
+                    android:id="@+id/staTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/staysIv"
+                    android:layout_alignTop="@id/staysIv"
+                    android:layout_alignRight="@id/staysIv"
+                    android:layout_alignBottom="@id/staysIv"
+                    android:layout_margin="1dp"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textColor="@color/white"
+                    android:text="Stays"
+                    android:layout_alignStart="@id/staysIv"
+                    android:layout_alignEnd="@id/staysIv" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linlay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stL"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linlay2">
+            <RelativeLayout
+                android:id="@+id/restaurantL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp">
+                    <ImageView
+                    android:id="@+id/restaurantIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_margin="8dp"
+                    android:adjustViewBounds="true"
+                    android:padding="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rest"/>
+                <TextView
+                    android:id="@+id/reTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/restaurantIv"
+                    android:layout_alignTop="@id/restaurantIv"
+                    android:layout_alignRight="@id/restaurantIv"
+                    android:layout_alignBottom="@id/restaurantIv"
+                    android:layout_margin="1dp"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textColor="@color/colorWhite"
+                    android:text="Restarurants"
+                    android:layout_alignStart="@id/restaurantIv"
+                    android:layout_alignEnd="@id/restaurantIv" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+</RelativeLayout>
