@@ -35,6 +35,7 @@ public class StaysImagesActivity extends AppCompatActivity implements StaysImage
     private DatabaseReference mDatabaseRef;
     private ValueEventListener mDBListener;
     private ArrayList<StaysUpload> mUploads;
+    private ArrayList<StaysUpload> mExampleList_Full;
 
     private void openDetailActivity (String[] data){
         Intent intent = new Intent(this, stayadmindetail.class);
@@ -60,6 +61,7 @@ public class StaysImagesActivity extends AppCompatActivity implements StaysImage
         mProgressCircle = findViewById(R.id.progress_circle);
 
         mUploads = new ArrayList<>();
+        mExampleList_Full = new ArrayList<>();
 
         mAdapter = new StaysImageAdapter(StaysImagesActivity.this, mUploads);
 
@@ -124,6 +126,7 @@ public class StaysImagesActivity extends AppCompatActivity implements StaysImage
         }
 
         mAdapter.filterList(filteredList);
+        mUploads = new ArrayList<>(filteredList);
     }
 
 
