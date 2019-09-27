@@ -9,6 +9,10 @@
     tools:context=".IndexActivity">
 
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
         <RelativeLayout
             android:id="@+id/advL"
             android:layout_width="match_parent"
@@ -149,6 +153,10 @@
             </RelativeLayout>
         </RelativeLayout>
 
+
+
+
+</RelativeLayout>
     <!--Draw-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navagation_view"
@@ -157,6 +165,8 @@
         app:menu="@menu/menu_nav"
         android:layout_gravity="start">
     </com.google.android.material.navigation.NavigationView>
+
+
 
 
 

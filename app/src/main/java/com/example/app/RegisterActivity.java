@@ -113,7 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
                             reference.child(uid).setValue(hashMap);
 
                             Toast.makeText(RegisterActivity.this, "Registered...\n"+user.getEmail(), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegisterActivity.this, restAct.class));
+                            startActivity(new Intent(RegisterActivity.this, IndexActivity.class));
                             finish();
                         } else {
 

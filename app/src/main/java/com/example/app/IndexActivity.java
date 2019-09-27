@@ -51,7 +51,7 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
         adventure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(IndexActivity.this, RegisterActivity.class));
+                startActivity(new Intent(IndexActivity.this, AdventureActivity.class));
             }
         });
         stay.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +102,7 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.nav_addv){
-            Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(IndexActivity.this, AdventureActivity.class));
         }
         if(id == R.id.nav_stays){
             startActivity(new Intent(IndexActivity.this, ProfileActivity.class));

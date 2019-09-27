@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Rishi");
+        actionBar.setTitle("Profile");
 
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
@@ -202,7 +202,7 @@ public class LoginActivity extends AppCompatActivity {
                             pd.dismiss();
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(LoginActivity.this, restAct.class));
+                            startActivity(new Intent(LoginActivity.this, IndexActivity.class));
                             finish();
                         } else {
                             pd.dismiss();
@@ -278,7 +278,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                             Toast.makeText(LoginActivity.this, ""+user.getEmail(), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginActivity.this, restAct.class));
+                            startActivity(new Intent(LoginActivity.this, IndexActivity.class));
                             finish();
                             //updateUI(user);
                         } else {
