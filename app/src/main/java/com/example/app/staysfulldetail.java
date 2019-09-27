@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 public class staysfulldetail<mDBListener3> extends AppCompatActivity {
@@ -23,8 +25,13 @@ public class staysfulldetail<mDBListener3> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staysfulldetail);
 
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("Details");
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Details");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -56,5 +63,32 @@ public class staysfulldetail<mDBListener3> extends AppCompatActivity {
                 .into(ImageDetails3);
 
 
+    }
+
+    private void checkUserStatus(){
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null){
+        }
+        else{
+            startActivity(new Intent(staysfulldetail.this, MainActivity.class));
+            finish();
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onStart() {
+        checkUserStatus();
+        super.onStart();
     }
 }

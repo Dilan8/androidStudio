@@ -193,7 +193,7 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
             startActivity(new Intent(AdventureActivity.this, AdventureActivity.class));
         }
         if(id == R.id.nav_stays){
-            startActivity(new Intent(AdventureActivity.this, ProfileActivity.class));
+            startActivity(new Intent(AdventureActivity.this, staysuserActivity.class));
         }
         if(id == R.id.nav_restaurant){
             startActivity(new Intent(AdventureActivity.this, restAct.class));

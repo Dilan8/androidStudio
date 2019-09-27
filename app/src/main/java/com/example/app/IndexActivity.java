@@ -57,7 +57,7 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
         stay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(IndexActivity.this, RegisterActivity.class));
+                startActivity(new Intent(IndexActivity.this, staysuserActivity.class));
             }
         });
         restaurant.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +107,7 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
             startActivity(new Intent(IndexActivity.this, AdventureActivity.class));
         }
         if(id == R.id.nav_stays){
-            startActivity(new Intent(IndexActivity.this, ProfileActivity.class));
+            startActivity(new Intent(IndexActivity.this, staysuserActivity.class));
         }
         if(id == R.id.nav_restaurant){
             startActivity(new Intent(IndexActivity.this, restAct.class));

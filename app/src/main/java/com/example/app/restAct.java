@@ -171,7 +171,7 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
             startActivity(new Intent(restAct.this, AdventureActivity.class));
         }
         if(id == R.id.nav_stays){
-            startActivity(new Intent(restAct.this, ProfileActivity.class));
+            startActivity(new Intent(restAct.this, staysuserActivity.class));
         }
         if(id == R.id.nav_restaurant){
             startActivity(new Intent(this, restAct.class));
