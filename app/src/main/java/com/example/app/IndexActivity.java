@@ -116,6 +116,12 @@ public class IndexActivity extends AppCompatActivity implements NavigationView.O
         if(id == R.id.nav_profile){
             startActivity(new Intent(IndexActivity.this, ProfileActivity.class));
         }
+        if(id == R.id.nav_contact){
+            startActivity(new Intent(IndexActivity.this, ContactForm.class));
+        }
+        if(id == R.id.nav_feedback){
+            startActivity(new Intent(IndexActivity.this, feedback.class));
+        }
         if(id == R.id.action_logout){
             firebaseAuth.signOut();
             checkUserStatus();

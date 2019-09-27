@@ -1,15 +1,23 @@
 package com.example.app;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,7 +28,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class   restAct extends AppCompatActivity implements ResUserAdapter.OnItemClickListener {
+public class   restAct extends AppCompatActivity implements ResUserAdapter.OnItemClickListener, NavigationView.OnNavigationItemSelectedListener {
+
+
+    //Drawer
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
+    FirebaseAuth firebaseAuth;
+
 
     private RecyclerView mRecyclerView2;
     private ResUserAdapter mAdapter2;
@@ -45,6 +60,22 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rest_act);
+
+
+        //Drawer
+        mDrawerLayout = findViewById(R.id.drawerLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        NavigationView navigationView = (NavigationView)findViewById(R.id.navagation_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        firebaseAuth = FirebaseAuth.getInstance();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Restaurants");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+
 
         mRecyclerView2 = findViewById(R.id.recycler_view2);
         mRecyclerView2.setHasFixedSize(true);
@@ -102,4 +133,66 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
         super.onDestroy();
         mDatabaseRef2.removeEventListener(mDBListener2);
     }
+
+    //Drawer
+    private void checkUserStatus(){
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null){
+            //mProfileTv.setText(user.getEmail());
+        }
+        else{
+            startActivity(new Intent(restAct.this, MainActivity.class));
+            finish();
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+    @Override
+    protected void onStart() {
+        checkUserStatus();
+        super.onStart();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.nav_main){
+            startActivity(new Intent(restAct.this, IndexActivity.class));
+        }
+        if(id == R.id.nav_addv){
+            startActivity(new Intent(restAct.this, AdventureActivity.class));
+        }
+        if(id == R.id.nav_stays){
+            startActivity(new Intent(restAct.this, ProfileActivity.class));
+        }
+        if(id == R.id.nav_restaurant){
+            startActivity(new Intent(this, restAct.class));
+        }
+        if(id == R.id.nav_profile){
+            startActivity(new Intent(restAct.this, ProfileActivity.class));
+        }
+        if(id == R.id.nav_contact){
+            startActivity(new Intent(restAct.this, ContactForm.class));
+        }
+        if(id == R.id.nav_feedback){
+            startActivity(new Intent(restAct.this, feedback.class));
+        }
+        if(id == R.id.action_logout){
+            firebaseAuth.signOut();
+            checkUserStatus();
+            finish();
+            return true;
+        }
+        return false;
+    }
+
 }

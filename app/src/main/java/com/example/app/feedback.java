@@ -1,6 +1,7 @@
 package com.example.app;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,9 +12,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class feedback extends AppCompatActivity {
     private TextView mTextMessage;
+    FirebaseAuth firebaseAuth;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -37,6 +41,13 @@ public class feedback extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Feedback");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+        firebaseAuth = FirebaseAuth.getInstance();
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
        // mTextMessage = findViewById(R.id.message111);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -50,11 +61,33 @@ public class feedback extends AppCompatActivity {
         });
     }
 
+    private void checkUserStatus(){
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null){
+            //mProfileTv.setText(user.getEmail());
+        }
+        else{
+            startActivity(new Intent(feedback.this, MainActivity.class));
+            finish();
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
 
-
-
-
-
-
+    @Override
+    protected void onStart() {
+        checkUserStatus();
+        super.onStart();
+    }
 }
+
+

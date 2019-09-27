@@ -70,10 +70,8 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
         NavigationView navigationView = (NavigationView)findViewById(R.id.navagation_view);
         navigationView.setNavigationItemSelectedListener(this);
         firebaseAuth = FirebaseAuth.getInstance();
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Adventures");
-
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
@@ -203,6 +201,12 @@ public class AdventureActivity extends AppCompatActivity implements AdventureAda
         }
         if(id == R.id.nav_profile){
             startActivity(new Intent(AdventureActivity.this, ProfileActivity.class));
+        }
+        if(id == R.id.nav_contact){
+            startActivity(new Intent(AdventureActivity.this, ContactForm.class));
+        }
+        if(id == R.id.nav_feedback){
+            startActivity(new Intent(AdventureActivity.this, feedback.class));
         }
         if(id == R.id.action_logout){
             firebaseAuth.signOut();

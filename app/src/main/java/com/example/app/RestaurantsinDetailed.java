@@ -1,5 +1,6 @@
 package com.example.app;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,18 +8,27 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 public class RestaurantsinDetailed extends AppCompatActivity {
 
     TextView ImageNameDetails1,ImageDiscrptionDetails1,ImageLocationDetails1;
     ImageView ImageDetails1;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurantsin_detailed);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Details");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         ImageNameDetails1 = findViewById(R.id.name_view);
         ImageDiscrptionDetails1= findViewById(R.id.des_view);
@@ -45,5 +55,34 @@ public class RestaurantsinDetailed extends AppCompatActivity {
                 .fit()
                 .centerCrop()
                 .into(ImageDetails1);
+    }
+
+    private void checkUserStatus(){
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null){
+            //mProfileTv.setText(user.getEmail());
+        }
+        else{
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onStart() {
+        checkUserStatus();
+        super.onStart();
     }
 }

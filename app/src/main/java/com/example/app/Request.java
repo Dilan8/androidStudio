@@ -1,5 +1,6 @@
 package com.example.app;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -10,16 +11,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Request extends AppCompatActivity {
     private Activity activity;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Feedback");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         final EditText your_name        = (EditText) findViewById(R.id.Name111);
         final EditText your_email       = (EditText) findViewById(R.id.Email111);
@@ -47,6 +58,7 @@ public class Request extends AppCompatActivity {
                 if (!isValidEmail(email)) {
                     onError = true;
                     your_email.setError("Invalid Email");
+                    your_email.requestFocus();
                     return;
                 }
 
@@ -87,11 +99,6 @@ public class Request extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-    }
 
     @Override
     protected void onStop() {
@@ -111,5 +118,32 @@ public class Request extends AppCompatActivity {
         return matcher.matches();
     }
 
+    private void checkUserStatus(){
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null){
+            //mProfileTv.setText(user.getEmail());
+        }
+        else{
+            startActivity(new Intent(Request.this, MainActivity.class));
+            finish();
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onStart() {
+        checkUserStatus();
+        super.onStart();
+    }
 }
+
