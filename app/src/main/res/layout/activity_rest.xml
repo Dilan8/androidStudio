@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResActivity">
-    <ProgressBar
-        android:id="@+id/progress_circle1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        tools:ignore="MissingConstraints" />
+    android:orientation="vertical"
+    tools:context=".ImageActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view1"
+
+    <EditText
+        android:id="@+id/edittext12"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="-42dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
 
-    </androidx.recyclerview.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progress_circle1"
+            android:layout_width="99dp"
+            android:layout_height="174dp"
+            android:layout_centerInParent="true"
 
-</RelativeLayout>
+            android:layout_gravity="center"
+            android:baselineAligned="false" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="90dp"
+            android:padding="4dp"
+            android:scrollbars="vertical" />
+    </RelativeLayout>
+
+</LinearLayout>

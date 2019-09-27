@@ -19,8 +19,7 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 
-
-
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -128,4 +127,8 @@ public class ImageAdapter  extends RecyclerView.Adapter <ImageAdapter.ImageViewH
         mListener = listener;
     }
 
+    public void filterList(ArrayList<upload> filteredList) {
+        mUploads = filteredList;
+        notifyDataSetChanged();
+    }
 }
