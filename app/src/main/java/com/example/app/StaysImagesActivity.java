@@ -167,6 +167,8 @@ public class StaysImagesActivity extends AppCompatActivity implements StaysImage
             public void onSuccess(Void aVoid) {
                 mDatabaseRef.child(selectedKey).removeValue();
                 Toast.makeText(StaysImagesActivity.this, "Item Deleted", Toast.LENGTH_SHORT).show();
+                finish();
+                startActivity(getIntent());
             }
         });
     }
