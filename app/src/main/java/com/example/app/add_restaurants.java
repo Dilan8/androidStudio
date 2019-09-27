@@ -121,8 +121,22 @@ public class add_restaurants extends AppCompatActivity {
     }
 
     private void addFile() {
+        if (mEditTextFileName1.getText().toString().equals("")){
+            mEditTextFileName1.setError("must filled");
+            Toast.makeText(add_restaurants.this, "All fields must be filled", Toast.LENGTH_SHORT).show();
+        }
 
-        if (mImageUri != null) {
+        else if (mEditTextFileName2.getText().toString().equals("")){
+            mEditTextFileName2.setError("must filled");
+            Toast.makeText(add_restaurants.this, "All fields must be filled", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (mEditTextFileName3.getText().toString().equals("")){
+            mEditTextFileName3.setError("must filled");
+            Toast.makeText(add_restaurants.this, "All fields must be filled", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (mImageUri != null) {
             final StorageReference fileReference = mStorageRef1.child(System.currentTimeMillis() + "." +
                     getFileExtension(mImageUri));
             mUploadTask1 = fileReference.putFile(mImageUri)
@@ -170,7 +184,7 @@ public class add_restaurants extends AppCompatActivity {
                         }
                     });
         } else {
-            Toast.makeText(this, "No File Selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No Image selected", Toast.LENGTH_SHORT).show();
         }
     }
     private void openImagesAct() {
