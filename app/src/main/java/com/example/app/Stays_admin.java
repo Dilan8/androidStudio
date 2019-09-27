@@ -125,8 +125,21 @@ public class Stays_admin extends AppCompatActivity {
         return mime.getExtensionFromMimeType(cR.getType(uri));
     }
     private void uploadFile() {
+        if (mEditTextFileName.getText().toString().equals("")){
+            mEditTextFileName.setError("Must be filled");
+            Toast.makeText(Stays_admin.this, "All fields must be filled", Toast.LENGTH_SHORT).show();
+        }
 
-        if(mImageUri != null){
+        else if (mEditTextFileName3.getText().toString().equals("")){
+            mEditTextFileName3.setError("Must be filled");
+            Toast.makeText(Stays_admin.this, "All fields must be filled", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (mEditTextFileName4.getText().toString().equals("")){
+            mEditTextFileName4.setError("Must be filled");
+            Toast.makeText(Stays_admin.this, "All fields must be filled", Toast.LENGTH_SHORT).show();
+        }
+        else if(mImageUri != null){
             final StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()+"."+
                     getFileExtension(mImageUri));
             mUploadTask = fileReference.putFile(mImageUri)

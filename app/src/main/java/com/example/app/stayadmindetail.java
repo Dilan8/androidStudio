@@ -98,6 +98,9 @@ public class stayadmindetail<mDBListener> extends AppCompatActivity {
         updateRef.child("name3").setValue(contentA);
         updateRef.child("name4").setValue(contentB);
         updateRef.child("name").setValue(content);
+
+
+
         Toast.makeText(this,"Successfully Updated", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, StaysImagesActivity.class);
