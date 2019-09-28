@@ -14,10 +14,9 @@ import com.squareup.picasso.Picasso;
 
 public class staysfulldetail<mDBListener3> extends AppCompatActivity {
 
-    TextView ImageNameDetails3,ImageDiscrptionDetails3,ImageLocationDetails3;
+    TextView ImageNameDetails3, ImageDiscrptionDetails3, ImageLocationDetails3;
     ImageView ImageDetails3;
     FirebaseAuth firebaseAuth;
-
 
 
     @Override
@@ -40,16 +39,14 @@ public class staysfulldetail<mDBListener3> extends AppCompatActivity {
         ImageNameDetails3 = findViewById(R.id.ImageNameDetails8);
         ImageDiscrptionDetails3 = findViewById(R.id.ImageDiscrptionDetails8);
         ImageDetails3 = findViewById(R.id.ImageDetails8);
-        ImageLocationDetails3=findViewById(R.id.ImageLocationDetails8);
+        ImageLocationDetails3 = findViewById(R.id.ImageLocationDetails8);
 
 
         Intent i = this.getIntent();
-        String name =i.getExtras().getString("Name_Key");
-        String imageUrl =i.getExtras().getString("Image_Key");
-        String Description =i.getExtras().getString("Description_Key");
-        String Location =i.getExtras().getString("Url_Key");
-
-
+        String name = i.getExtras().getString("Name_Key");
+        String imageUrl = i.getExtras().getString("Image_Key");
+        String Description = i.getExtras().getString("Description_Key");
+        String Location = i.getExtras().getString("Url_Key");
 
 
         ImageNameDetails3.setText(name);
@@ -65,15 +62,15 @@ public class staysfulldetail<mDBListener3> extends AppCompatActivity {
 
     }
 
-    private void checkUserStatus(){
+    private void checkUserStatus() {
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        if(user != null){
-        }
-        else{
+        if (user != null) {
+        } else {
             startActivity(new Intent(staysfulldetail.this, MainActivity.class));
             finish();
         }
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

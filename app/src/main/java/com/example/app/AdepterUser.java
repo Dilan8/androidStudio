@@ -54,7 +54,7 @@ public class AdepterUser extends RecyclerView.Adapter<AdepterUser.MyHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, ""+userEmail, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, ""+userEmail, Toast.LENGTH_SHORT).show();
             }
         });
 

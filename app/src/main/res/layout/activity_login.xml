@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="text"
             android:textSize="20sp"
             tools:ignore="TextFields" />
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_rounded"
-        android:text="Login"
+        android:text="@string/login"
         android:textColor="#ffffff"
         android:textSize="22sp" />
 
@@ -70,26 +70,16 @@
         android:id="@+id/recoverPassTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
-        android:text="Forgot Password? Recover" />
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/googleLoginBtn"
-        android:layout_width="161dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        >
-
-    </com.google.android.gms.common.SignInButton>
+        android:text="@string/forgot_password_recover" />
 
     <TextView
         android:id="@+id/registerpath"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="30sp"
         android:textSize="18sp"
         android:textAlignment="center"
         android:text="@string/don_t_have_an_account" />
@@ -100,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="#ffffff"
         android:textSize="22sp" />
 
@@ -112,6 +102,6 @@
         android:textSize="18sp"
         android:textColor="@color/colorPrimaryDark"
         android:textAlignment="center"
-        android:text="I'm a Admin" />
+        android:text="@string/i_m_a_admin" />
 
 </LinearLayout>

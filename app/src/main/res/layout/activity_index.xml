@@ -47,7 +47,7 @@
                     android:textStyle="bold"
                     android:fontFamily="serif-monospace"
                     android:textColor="@color/colorWhite"
-                    android:text="Adventures"
+                    android:text="@string/adventures"
                     android:layout_alignStart="@id/adventureIv"
                     android:layout_alignEnd="@id/adventureIv" />
             </RelativeLayout>
@@ -98,7 +98,7 @@
                     android:textStyle="bold"
                     android:fontFamily="serif-monospace"
                     android:textColor="@color/white"
-                    android:text="Stays"
+                    android:text="@string/stays"
                     android:layout_alignStart="@id/staysIv"
                     android:layout_alignEnd="@id/staysIv" />
             </RelativeLayout>
@@ -148,7 +148,7 @@
                     android:textStyle="bold"
                     android:fontFamily="serif-monospace"
                     android:textColor="@color/colorWhite"
-                    android:text="Restarurants"
+                    android:text="@string/restarurants"
                     android:layout_alignStart="@id/restaurantIv"
                     android:layout_alignEnd="@id/restaurantIv" />
             </RelativeLayout>

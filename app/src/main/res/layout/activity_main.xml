@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:text="Welcome to Travelly"
+        android:text="@string/welcome_to_travelly"
         android:textColor="#8BBD43"
         android:textColorHighlight="#C4584141"
         android:textSize="30sp"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
-        android:text="Login Here"
+        android:text="@string/login_here"
         android:textColor="#ffffff"
         android:textSize="22sp" />
 
@@ -70,7 +70,7 @@
         android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:background="@drawable/button_rounded"
-        android:text="Join Here"
+        android:text="@string/join_here"
         android:textColor="#ffffff"
         android:textSize="22sp" />
 

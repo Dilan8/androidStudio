@@ -74,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
                     mPasswordEt.setFocusable(true);
                 }
                 else if(!conpass.equals(password)){
-                    mconpass.setError("Password Length at least 6 characters");
+                    mconpass.setError("Passwords Mismatch...");
                     mconpass.setFocusable(true);
                 }
                 else{

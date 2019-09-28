@@ -140,9 +140,7 @@
 
 
     //Cletwin
-    <string name="login">Login</string>
     <string name="already_registered">Already Registered?</string>
-    <string name="register">Register</string>
     <string name="by_clicking_submit_you_agree_our_terms_and_conditions">by clicking submit you agree our Terms and Conditions</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="already">Continue with Existing Account</string>
@@ -152,7 +150,6 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="title_activity_daw">DawActivity</string>
-    <string name="email">Email</string>
     <string name="phone">Phone</string>
 
     <string name="admin_stays_head">Stays</string>
@@ -176,5 +173,19 @@
     <string name="stay_name_place">Name and Place of  the Stay</string>
     <string name="image_saty_name">Name</string>
     <string name="search_hint">Search here for Stays</string>
+    <string name="forgot_password_recover">Forgot Password? Recover</string>
+    <string name="register">Register</string>
+    <string name="i_m_a_admin">I\'m a Admin</string>
+    <string name="welcome_to_travelly">Welcome to Travelly</string>
+    <string name="login_here">Login Here</string>
+    <string name="join_here">Join Here</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="i_m_a_user">I\'m a User</string>
+    <string name="adventures">Adventures</string>
+    <string name="stays">Stays</string>
+    <string name="restarurants">Restarurants</string>
 
 </resources>
