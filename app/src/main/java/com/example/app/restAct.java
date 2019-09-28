@@ -10,8 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -39,12 +42,13 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
 
     private RecyclerView mRecyclerView2;
     private ResUserAdapter mAdapter2;
-
+    private EditText editText;
     private ProgressBar mProgressCircle2;
     private FirebaseStorage mStorage2;
     private DatabaseReference mDatabaseRef2;
     private ValueEventListener mDBListener2;
     private List<Upload_res> mUploads1;
+    private ArrayList<Upload_res>mUploadsFull2;
 
     private void openDetailActivity (String[] data){
         Intent intent = new Intent(this,RestaurantsinDetailed.class);
@@ -84,7 +88,7 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
         mProgressCircle2 = findViewById(R.id.progress_circle2);
 
         mUploads1 = new ArrayList<>();
-
+        mUploadsFull2=new ArrayList<>();
 
         mAdapter2 = new ResUserAdapter(restAct.this, mUploads1);
 
@@ -96,7 +100,24 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
         mStorage2 = FirebaseStorage.getInstance();
 
         mDatabaseRef2 = FirebaseDatabase.getInstance().getReference("Restaurants");
+        editText = findViewById(R.id.edittext123);
+        editText.addTextChangedListener(new TextWatcher(){
 
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
         mDBListener2 = mDatabaseRef2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -124,7 +145,7 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
         Upload_res selectedItem=mUploads1.get(position);
         String[] uploadData = {selectedItem.getImageUrl(),selectedItem.getName(),selectedItem.getDes(),selectedItem.getUrl()};
         openDetailActivity(uploadData);
-        Toast.makeText(this, "Normal click at position: " + position, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Normal click at position: " + position, Toast.LENGTH_SHORT).show();
     }
 
 
@@ -133,6 +154,19 @@ public class   restAct extends AppCompatActivity implements ResUserAdapter.OnIte
         super.onDestroy();
         mDatabaseRef2.removeEventListener(mDBListener2);
     }
+    private void  filter(String text){
+
+        ArrayList<Upload_res> filteredList = new ArrayList<>();
+        for (Upload_res item :mUploads1){
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+        mUploadsFull2=new ArrayList<>(mUploads1);
+        mAdapter2.filterList(filteredList);
+        mUploads1=new ArrayList<>(filteredList);
+    }
+
 
     //Drawer
     private void checkUserStatus(){

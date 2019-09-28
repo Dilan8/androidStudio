@@ -98,7 +98,7 @@ public class DetailsActivity<mDBListener> extends AppCompatActivity {
         String contentB = ImageLocationDetails.getText().toString();
 
 
-        Toast.makeText(this, id, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, id, Toast.LENGTH_LONG).show();
         updateRef.child("name3").setValue(contentA);
         updateRef.child("name4").setValue(contentB);
         updateRef.child("name").setValue(content);

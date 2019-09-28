@@ -21,7 +21,7 @@
         android:layout_marginRight="63dp"
         android:background="@drawable/button_rounded"
 
-        android:text="Choose file" />
+        android:text="@string/button_choose_image" />
 
     <EditText
         android:id="@+id/edit_text_file_name"
@@ -131,12 +131,12 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="229dp"
-        android:layout_marginLeft="229dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginRight="217dp"
+        android:layout_marginBottom="57dp"
         android:background="@drawable/button_rounded"
-        android:text="upload" />
+        android:text="@string/button_upload" />
 
 
     <TextView
@@ -156,7 +156,7 @@
         android:background="@drawable/button_rounded"
         android:gravity="center"
 
-        android:text="Show Uplods"
+        android:text="@string/text_view_show_uploads"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="16sp" />
 

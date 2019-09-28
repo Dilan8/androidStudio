@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdventureAdapter extends RecyclerView.Adapter <AdventureAdapter.ImageViewHolder> {
@@ -122,4 +123,8 @@ public class AdventureAdapter extends RecyclerView.Adapter <AdventureAdapter.Ima
         mListener3 = listener;
     }
 
+    public void filterList(ArrayList<upload> filteredList) {
+        mUploads3 = filteredList;
+        notifyDataSetChanged();
+    }
 }

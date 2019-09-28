@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ImageViewHolder> {
@@ -116,5 +117,12 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ImageViewHolder>
 
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener1 = listener;
+    }
+
+
+
+    public void filterList(ArrayList<Upload_res> filteredList) {
+        mUploads = filteredList;
+        notifyDataSetChanged();
     }
 }

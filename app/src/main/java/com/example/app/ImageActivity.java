@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -29,11 +32,12 @@ public class ImageActivity extends AppCompatActivity implements ImageAdapter.OnI
     private ImageAdapter mAdapter;
 
     private ProgressBar mProgressCircle;
-
+    private EditText editText;
     private FirebaseStorage mStorage;
     private DatabaseReference mDatabaseRef;
     private ValueEventListener mDBListener;
     private List<upload> mUploads;
+    private  ArrayList<upload> mUploadsfull;
 
     private void openDetailActivity (String[] data){
         Intent intent = new Intent(this,DetailsActivity.class);
@@ -65,6 +69,24 @@ public class ImageActivity extends AppCompatActivity implements ImageAdapter.OnI
         mAdapter.setOnItemClickListener(ImageActivity.this);
         mStorage = FirebaseStorage.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
+        editText = findViewById(R.id.edittext);
+        editText.addTextChangedListener(new TextWatcher(){
+
+                                            @Override
+                                            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                            }
+
+                                            @Override
+                                            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                                            }
+
+                                            @Override
+                                            public void afterTextChanged(Editable s) {
+                                                filter(s.toString());
+                                            }
+                                        });
 
         mDBListener=mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -107,7 +129,7 @@ public class ImageActivity extends AppCompatActivity implements ImageAdapter.OnI
         upload selectedItem=mUploads.get(position);
         String[] uploadData = {selectedItem.getId(),selectedItem.getImageUrl(),selectedItem.getName(),selectedItem.getName3(),selectedItem.getName4()};
         openDetailActivity(uploadData);
-        Toast.makeText(this, "position:" + position, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "position:" + position, Toast.LENGTH_SHORT).show();
 
 
     }
@@ -122,13 +144,25 @@ public class ImageActivity extends AppCompatActivity implements ImageAdapter.OnI
             @Override
             public void onSuccess(Void aVoid) {
                 mDatabaseRef.child(selectedKey).removeValue();
-//                Toast.makeText(ImageActivity.this, "Item deleted", Toast.LENGTH_SHORT).show();
+               Toast.makeText(ImageActivity.this, "Item deleted", Toast.LENGTH_SHORT).show();
             }
         });
     }
     protected void onDestroy() {
         super.onDestroy();
         mDatabaseRef.removeEventListener(mDBListener);
+    }
+    private void  filter(String text){
+
+        ArrayList<upload> filteredList = new ArrayList<>();
+        for (upload item :mUploads){
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+        mUploadsfull=new ArrayList<>(mUploads);
+        mAdapter.filterList(filteredList);
+        mUploads=new ArrayList<>(filteredList);
     }
 }
 

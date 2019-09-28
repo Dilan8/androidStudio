@@ -39,6 +39,7 @@ public class staysuserActivity extends AppCompatActivity implements staysuserAda
     private DatabaseReference mDatabaseRef;
     private ValueEventListener mDBListener;
     private ArrayList<StaysUpload> mUploads;
+    private ArrayList<StaysUpload> mExampleList_Full;
 
     //Drawer
     private DrawerLayout mDrawerLayout;
@@ -79,6 +80,7 @@ public class staysuserActivity extends AppCompatActivity implements staysuserAda
         mProgressCircle = findViewById(R.id.progress_circle);
 
         mUploads = new ArrayList<>();
+        mExampleList_Full = new ArrayList<>();
 
         mAdapter = new staysuserAdapter(staysuserActivity.this, mUploads);
 
@@ -105,19 +107,15 @@ public class staysuserActivity extends AppCompatActivity implements staysuserAda
                 filter(s.toString());
             }
         });
-
         mDBListener=mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
                 mUploads.clear();
-
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     StaysUpload upload = postSnapshot.getValue(StaysUpload.class);
                     upload.setKey(postSnapshot.getKey());
                     mUploads.add(upload);
                 }
-
                 mAdapter.notifyDataSetChanged();
                 mProgressCircle.setVisibility(View.INVISIBLE);
             }
@@ -140,6 +138,7 @@ public class staysuserActivity extends AppCompatActivity implements staysuserAda
         }
 
         mAdapter.filterList(filteredList);
+        mUploads = new ArrayList<>(filteredList);
     }
 
     @Override
